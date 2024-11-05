@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap with FullPage Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- FullPage.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.css">
+    
+    <style>
+        /* 自訂每個 section 的樣式 */
+        .section {
+            text-align: center;
+            font-size: 2rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .section1 { background-color: #1E88E5; }
+        .section2 { background-color: #D81B60; }
+        .section3 { background-color: #43A047; }
+        .section4 { background-color: #F4511E; }
+
+        /* 固定導航欄樣式 */
+        nav {
+            position: fixed;  /* 固定定位 */
+            top: 0;           /* 從頂部開始 */
+            left: 0;          /* 從左側開始 */
+            right: 0;         /* 佔滿整個寬度 */
+            z-index: 1000;    /* 確保導航欄在最上層 */
+        }
+
+        /* 為固定導航欄留出空間 */
+        body {
+            padding-top: 70px; /* 為固定導航欄留出空間，根據導航欄的高度調整 */
+        }
+
+        .code-display {
+            text-align: left;   /* 靠左對齊 */
+            font-size: 12px;    /* 設置字體大小為12px */
+            color: #fff;        /* 字體顏色 */
+            background-color: #333; /* 背景顏色 */
+            padding: 10px;      /* 內邊距 */
+            border-radius: 5px; /* 邊框圓角 */
+            overflow: auto;     /* 啟用滾動條以便長程式碼顯示 */
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top"> <!-- 添加 fixed-top 類別 -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="JS.png" alt="Bootstrap" width="70" height="35">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- 返回首頁的按鈕 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <!-- 10個能連結到不同頁面的按鈕 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="aos.html">AOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ScrollReveal.html">ScrollReveal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gridster.html">gridster</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="a-frame.html">A-Frame</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FullPage.html">FuLLPage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Owl_Carousel.html">Owl_Carousel</a>
+                    </li>                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="ResponsiveVoice.html">ResponsiveVoice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Chart.html">Chart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ApexCharts.html">ApexCharts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Leaflet.html">Leaflet</a>
+                    </li>                  
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+<div id="fullpage">
+    <div class="section section1">FuLLPage 翻頁動畫</div>
+
+    <div class="section section2">      
+      <a href="https://alvarotrigo.com/fullPage/#page1">FullPage 官網</a>      
+    </div>
+
+    <div class="section section3">
+      <h3>範例程式碼</h3>
+      <div class="code-display">
+      <pre><code class="language-html">
+        &lt;!-- FullPage.js 區塊 --&gt;
+        &lt;div id="fullpage"&gt;
+          &lt;div class="section section1"&gt;Page 1: Welcome&lt;/div&gt;
+          &lt;div class="section section2"&gt;Page 2: About Us&lt;/div&gt;
+          &lt;div class="section section3"&gt;Page 3: Services&lt;/div&gt;
+          &lt;div class="section section4"&gt;Page 4: Contact&lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- FullPage.js 初始化程式 --&gt;
+        &lt;script&gt;
+          $(document).ready(function() {
+            new fullpage('#fullpage', {
+              autoScrolling: true,
+              navigation: true,
+              navigationPosition: 'right',
+              navigationTooltips: ['Welcome', 'About Us', 'Services', 'Contact'],
+              showActiveTooltip: true
+            });
+          });
+        &lt;/script&gt;
+                </code></pre>
+    </div>
+    </div>
+    <div class="section section4">效果展示（展示中）</div>
+</div>
+
+<!-- 引入 FullPage.js 和 jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js"></script>
+
+<!-- FullPage.js 初始化 -->
+<script>
+    $(document).ready(function() {
+        new fullpage('#fullpage', {
+            autoScrolling: true,
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['Welcome', 'About Us', 'Services', 'Contact'],
+            showActiveTooltip: true,
+            responsiveWidth: 1024 // 可設置為小於某寬度時禁用自動滾動
+        });
+    });
+</script>
+</body>
+</html>
