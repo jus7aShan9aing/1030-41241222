@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Owl Carousel with Images</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha384-0Y1mQdIPqJvwrDXuTrnB2d36pOob4NwbZk+7IjYxH5WiPx9uU6K2NzRuwLsQYbJe" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha384-XDq5Qa+7nW4xP5M7zDQ9zCzwEOeMLKbZ+TLg2FO2Yv42PiZC/NVRz0A6DB7tcVjH" crossorigin="anonymous">
+    <style>
+        .owl-theme .item {
+          height: 10rem;
+          background: #4dc7a0;
+          padding: 1rem;
+        }
+
+        .owl-carousel .item h4 {
+          color: #fff;
+          font-weight: 400;
+          font-size: 1.4375rem;
+          margin-top: 0rem;
+        }
+        body {
+            padding-top: 80px; /* 根據navbar的高度添加上邊距 */
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top"> <!-- 添加 fixed-top 類別 -->
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="JS.png" alt="Bootstrap" width="70" height="35">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- 返回首頁的按鈕 -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <!-- 10個能連結到不同頁面的按鈕 -->
+                <li class="nav-item">
+                    <a class="nav-link" href="aos.html">AOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ScrollReveal.html">ScrollReveal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gridster.html">gridster</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="a-frame.html">A-Frame</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="FullPage.html">FuLLPage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Owl_Carousel.html">Owl_Carousel</a>
+                </li>                  
+                <li class="nav-item">
+                    <a class="nav-link" href="ResponsiveVoice.html">ResponsiveVoice</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Chart.html">Chart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ApexCharts.html">ApexCharts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Leaflet.html">Leaflet</a>
+                </li>                  
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="container">
+      <div class="row">
+        <h1>Owl_Carousel 圖片動畫</h1>
+        <!--連結-->
+        <div class="section section-1" data-stellar-background-ratio="0.5">
+          <a href="https://owlcarousel2.github.io/OwlCarousel2/demos/demos.html">Owl_Carousel 官網</a>
+        </div>
+        <!--程式碼-->
+        <h2>範例程式碼</h2>
+        <div class="code-block">
+          <pre>
+          <code>
+            &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha384-0Y1mQdIPqJvwrDXuTrnB2d36pOob4NwbZk+7IjYxH5WiPx9uU6K2NzRuwLsQYbJe" crossorigin="anonymous"&gt;
+            &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha384-XDq5Qa+7nW4xP5M7zDQ9zCzwEOeMLKbZ+TLg2FO2Yv42PiZC/NVRz0A6DB7tcVjH" crossorigin="anonymous"&gt;
+    
+            &lt;div class="owl-carousel owl-theme"&gt;
+            &lt;div class="item"&gt;&lt;h4&gt;1&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class="item"&gt;&lt;h4&gt;2&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class="item"&gt;&lt;h4&gt;3&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class="item"&gt;&lt;h4&gt;4&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class="item"&gt;&lt;h4&gt;5&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class="item"&gt;&lt;h4&gt;6&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class="item"&gt;&lt;h4&gt;7&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class="item"&gt;&lt;h4&gt;8&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class="item"&gt;&lt;h4&gt;9&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class="item"&gt;&lt;h4&gt;10&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class="item"&gt;&lt;h4&gt;11&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class="item"&gt;&lt;h4&gt;12&lt;/h4&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;script&gt;
+            $(document).ready(function(){
+                $('.owl-carousel').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 3
+                        },
+                        1000: {
+                            items: 5
+                        }
+                    }
+                });
+            });
+            &lt;/script&gt;
+          </code>
+          </pre>
+        </div>
+        <!--程式碼-->
+
+        <h2>效果展示</h2>
+
+<!-- owl.carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</link>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</link>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <div class="owl-carousel owl-theme">
+    <div class="item"><h4>1</h4></div>
+    <div class="item"><h4>2</h4></div>
+    <div class="item"><h4>3</h4></div>
+    <div class="item"><h4>4</h4></div>
+    <div class="item"><h4>5</h4></div>
+    <div class="item"><h4>6</h4></div>
+    <div class="item"><h4>7</h4></div>
+    <div class="item"><h4>8</h4></div>
+    <div class="item"><h4>9</h4></div>
+    <div class="item"><h4>10</h4></div>
+    <div class="item"><h4>11</h4></div>
+    <div class="item"><h4>12</h4></div>
+  </div>
+
+<script>
+$(".owl-carousel").owlCarousel({
+  loop: true, // 循環播放
+  margin: 10, // 外距 10px
+  nav: true, // 顯示點點
+  responsive: {
+    0: {
+      items: 1 // 螢幕大小為 0~600 顯示 1 個項目
+    },
+    600: {
+      items: 3 // 螢幕大小為 600~1000 顯示 3 個項目
+    },
+    1000: {
+      items: 5 // 螢幕大小為 1000 以上 顯示 5 個項目
+    }
+  }
+});
+</script>
+
+</body>
+</html>
